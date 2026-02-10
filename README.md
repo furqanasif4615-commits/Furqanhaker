@@ -1,4 +1,506 @@
-# Furqanhaker
+[M Furqan Asif (1).html](https://github.com/user-attachments/files/25216659/M.Furqan.Asif.1.html)# Furqanhaker
+
+[Uploading M Furqan Asif (1).html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Furqan Asif | Personal Website</title>
+    <style>
+        :root {
+            --color-bg-primary: #0a0e27;
+            --color-bg-secondary: #1a1f3a;
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #a0aec0;
+            --color-accent: #667eea;
+            --color-accent-light: #764ba2;
+            --color-glow: rgba(102, 126, 234, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 100%);
+            color: var(--color-text-primary);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .background-decoration {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, var(--color-glow) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .decoration-1 {
+            top: -250px;
+            right: -250px;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .decoration-2 {
+            bottom: -250px;
+            left: -250px;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(50px, -50px) scale(1.1); }
+            66% { transform: translate(-50px, 50px) scale(0.9); }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        .birth-info {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .birth-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .birth-detail {
+            text-align: center;
+        }
+
+        .birth-label {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .birth-value {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-accent);
+        }
+
+        .age-counter {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .counter-title {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            color: var(--color-text-secondary);
+            font-weight: 300;
+        }
+
+        .time-units {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+        }
+
+        .time-unit {
+            text-align: center;
+            padding: 20px;
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .time-unit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .time-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            display: block;
+            margin-bottom: 5px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .time-label {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .quote-section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            margin-bottom: 40px;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            font-weight: 300;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+
+        .message-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .message-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .message-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.15);
+            border-color: var(--color-accent);
+        }
+
+        .message-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .message-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--color-accent);
+        }
+
+        .message-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--color-text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .footer-heart {
+            color: #e74c3c;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .birth-details {
+                gap: 20px;
+            }
+
+            .time-units {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .time-value {
+                font-size: 2rem;
+            }
+
+            .quote-text {
+                font-size: 1.1rem;
+            }
+
+            .message-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .birth-info, .age-counter, .quote-section, .message-card {
+                padding: 20px;
+            }
+
+            .time-value {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-decoration decoration-1"></div>
+    <div class="background-decoration decoration-2"></div>
+
+    <div class="container">
+        <header>
+            <h1>M Furqan Asif</h1>
+            <p class="tagline">Every moment is a new beginning</p>
+        </header>
+
+        <section class="birth-info">
+            <div class="birth-details">
+                <div class="birth-detail">
+                    <div class="birth-label">Date of Birth</div>
+                    <div class="birth-value">4 March 2007</div>
+                </div>
+                <div class="birth-detail">
+                    <div class="birth-label">Time of Birth</div>
+                    <div class="birth-value">5:00 AM</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="age-counter">
+            <h2 class="counter-title">My Journey Through Time</h2>
+            <div class="time-units">
+                <div class="time-unit">
+                    <span class="time-value" id="years">0</span>
+                    <span class="time-label">Years</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="months">0</span>
+                    <span class="time-label">Months</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="days">0</span>
+                    <span class="time-label">Days</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="hours">0</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutes">0</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="seconds">0</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <p class="quote-text">"The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well."</p>
+            <p class="quote-author">— Ralph Waldo Emerson</p>
+        </section>
+
+        <section class="message-cards">
+            <div class="message-card">
+                <div class="message-icon">🌱</div>
+                <h3 class="message-title">Growth</h3>
+                <p class="message-text">Every second that passes is a moment of growth, learning, and becoming a better version of yourself.</p>
+            </div>
+            <div class="message-card">
+                <div class="message-icon">✨</div>
+                <h3 class="message-title">Moments</h3>
+                <p class="message-text">Life isn't measured by the breaths we take, but by the moments that take our breath away.</p>
+            </div>
+            <div class="message-card">
+                <div class="message-icon">🎯</div>
+                <h3 class="message-title">Purpose</h3>
+                <p class="message-text">Each day brings new opportunities to make a positive impact and pursue your dreams with passion.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Made with <span class="footer-heart">♥</span> by M Furqan Asif</p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">Born on 4 March 2007 • Growing every second</p>
+        </footer>
+    </div>
+
+    <script>
+        // Birth date and time: 4 March 2007, 5:00 AM
+        const birthDate = new Date(2007, 2, 4, 5, 0, 0); // Months are 0-indexed in JavaScript
+
+        function updateAge() {
+            const now = new Date();
+            const diff = now - birthDate;
+
+            // Calculate total time units
+            const totalSeconds = Math.floor(diff / 1000);
+            const totalMinutes = Math.floor(totalSeconds / 60);
+            const totalHours = Math.floor(totalMinutes / 60);
+            const totalDays = Math.floor(totalHours / 24);
+
+            // Calculate years and remaining days
+            let years = now.getFullYear() - birthDate.getFullYear();
+            let months = now.getMonth() - birthDate.getMonth();
+            let days = now.getDate() - birthDate.getDate();
+            let hours = now.getHours() - birthDate.getHours();
+            let minutes = now.getMinutes() - birthDate.getMinutes();
+            let seconds = now.getSeconds() - birthDate.getSeconds();
+
+            // Adjust for negative values
+            if (seconds < 0) {
+                seconds += 60;
+                minutes--;
+            }
+            if (minutes < 0) {
+                minutes += 60;
+                hours--;
+            }
+            if (hours < 0) {
+                hours += 24;
+                days--;
+            }
+            if (days < 0) {
+                // Get days in previous month
+                const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+                days += prevMonth.getDate();
+                months--;
+            }
+            if (months < 0) {
+                months += 12;
+                years--;
+            }
+
+            // Update DOM
+            document.getElementById('years').textContent = years;
+            document.getElementById('months').textContent = months;
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours;
+            document.getElementById('minutes').textContent = minutes;
+            document.getElementById('seconds').textContent = seconds;
+        }
+
+        // Update immediately and then every second
+        updateAge();
+        setInterval(updateAge, 1000);
+
+        // Add smooth scroll behavior
+        document.documentElement.style.scrollBehavior = 'smooth';
+    </script>
+</body>
+</html>
+
+…]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [M Furqan Asif (1).zip](https://github.com/user-attachments/files/25216622/M.Furqan.Asif.1.zip)
 
